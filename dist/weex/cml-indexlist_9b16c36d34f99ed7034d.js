@@ -59,7 +59,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "gonglei.me/cml-indexlist/dist/weex/";
+/******/ 	__webpack_require__.p = "http://gonglei.me/cml-indexlist/dist/weex/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);

@@ -1,6 +1,6 @@
 
 // 设置静态资源的线上路径
-const publicPath = 'gonglei.me/cml-indexlist/dist';
+const publicPath = 'http://gonglei.me/cml-indexlist/dist';
 // 设置api请求前缀
 const apiPrefix = 'https://api.chameleon.com';
 

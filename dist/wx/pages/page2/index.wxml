@@ -1,0 +1,3 @@
+<view class="page-wrapper  cml-base cml-view">
+  <indexlist dataList="{{dataList}}" bindonselect="_cmlEventProxy" data-eventonselect="onItemSelect" class=" cml-base cml-indexlist" />
+</view>
