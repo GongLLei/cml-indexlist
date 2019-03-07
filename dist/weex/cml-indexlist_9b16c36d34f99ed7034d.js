@@ -59,7 +59,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "//www.static.chameleon.com/cml/weex/";
+/******/ 	__webpack_require__.p = "gonglei.me/cml-indexlist/dist/weex/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
@@ -9214,8 +9214,8 @@ function get(_ref) {
       _ref$resDataType = _ref.resDataType,
       resDataType = _ref$resDataType === undefined ? 'json' : _ref$resDataType;
 
-  var media = process.env.media;
-  domainkey = domainkey || process.env.defaultDomainKey;
+  var media = "build";
+  domainkey = domainkey || "apiPrefix";
   // 兼容mock-api
   if (media === 'dev') {
     if (url.indexOf('?') === -1) {
@@ -11160,8 +11160,8 @@ function request(_ref) {
       _ref$resDataType = _ref.resDataType,
       resDataType = _ref$resDataType === undefined ? 'json' : _ref$resDataType;
 
-  var media = process.env.media;
-  domainkey = domainkey || process.env.defaultDomainKey;
+  var media = "build";
+  domainkey = domainkey || "apiPrefix";
   // 兼容mock-api
   if (media === 'dev') {
     if (url.indexOf('?') === -1) {
@@ -11587,8 +11587,8 @@ function post(_ref) {
       _ref$resDataType = _ref.resDataType,
       resDataType = _ref$resDataType === undefined ? 'json' : _ref$resDataType;
 
-  var media = process.env.media;
-  domainkey = domainkey || process.env.defaultDomainKey;
+  var media = "build";
+  domainkey = domainkey || "apiPrefix";
   if (media === 'dev') {
     if (url.indexOf('?') === -1) {
       url += '?';
@@ -15880,7 +15880,7 @@ function isNeedApiPrefix(url) {
 }
 
 function addApiPrefix(url, domainkey) {
-  var domainMap = process.env.domainMap;
+  var domainMap = {"apiPrefix":"https://api.chameleon.com"};
   if (domainMap) {
     return domainMap[domainkey] + url;
   }

@@ -1,9 +1,0 @@
-<view class="index-list-wrapper  cml-base cml-view">
-  <i-index height="1200rpx" class=" cml-base cml-i-index"> 
-    <i-index-item wx:for="{{cities}}" wx:for-index="index" wx:key="{{index}}" wx:for-item="item" name="{{item.key}}" class=" cml-base cml-i-index-item">
-      <view class="index-list-item  cml-base cml-view" wx:for="{{item.list}}" wx:for-index="in" wx:key="{{in}}" wx:for-item="it" bindtap="_cmlInlineStatementEventProxy" data-arg0="{{it}}" data-args="it" data-eventtap="onItemSelect">
-        <text class=" cml-base cml-text">{{it.name}}</text>
-      </view>
-    </i-index-item>
-  </i-index>
-</view>

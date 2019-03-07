@@ -1,8 +1,0 @@
-{
-    "usingComponents": {
-        "indexlist": "./../../components/indexlist2/index"
-    },
-    "navigationBarTitleText": "index",
-    "backgroundTextStyle": "dark",
-    "backgroundColor": "#E2E2E2"
-}

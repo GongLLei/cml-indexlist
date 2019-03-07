@@ -1,8 +1,0 @@
-{
-    "usingComponents": {
-        "cml-buildin-button": "/npm/chameleon-ui-builtin/components/button/button"
-    },
-    "navigationBarTitleText": "index",
-    "backgroundTextStyle": "dark",
-    "backgroundColor": "#E2E2E2"
-}

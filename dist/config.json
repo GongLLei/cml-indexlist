@@ -8,7 +8,7 @@
             "url": "https://www.chameleon.com/cml/h5/index"
         },
         "weex": {
-            "url": "//www.static.chameleon.com/cml/weex/cml-indexlist_033eca9ab35461615495.js",
+            "url": "gonglei.me/cml-indexlist/dist/weex/cml-indexlist_9b16c36d34f99ed7034d.js",
             "query": {
                 "path": "/pages/index/index"
             }
@@ -23,7 +23,7 @@
             "url": "https://www.chameleon.com/cml/indexlist1"
         },
         "weex": {
-            "url": "//www.static.chameleon.com/cml/weex/cml-indexlist_033eca9ab35461615495.js",
+            "url": "gonglei.me/cml-indexlist/dist/weex/cml-indexlist_9b16c36d34f99ed7034d.js",
             "query": {
                 "path": "/pages/page/index"
             }
@@ -38,7 +38,7 @@
             "url": "https://www.chameleon.com/cml/indexlist2"
         },
         "weex": {
-            "url": "//www.static.chameleon.com/cml/weex/cml-indexlist_033eca9ab35461615495.js",
+            "url": "gonglei.me/cml-indexlist/dist/weex/cml-indexlist_9b16c36d34f99ed7034d.js",
             "query": {
                 "path": "/pages/page2/index"
             }
