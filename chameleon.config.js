@@ -29,6 +29,7 @@ cml.config.merge({
       console: false
     },
     build: {
+      minimize: false,
       analysis: false,
       publicPath: `${publicPath}/web/`,
       apiPrefix,

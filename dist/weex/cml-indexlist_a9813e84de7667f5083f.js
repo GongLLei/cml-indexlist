@@ -14412,7 +14412,7 @@ exports.default = new Method();
 /***/ "oJVY":
 /***/ (function(module, exports) {
 
-module.exports = {"mode":"history","domain":"https://www.chameleon.com","routes":[{"url":"/cml/h5/index","path":"/pages/index/index","name":"首页","mock":"index.php"},{"url":"/cml/indexlist1","path":"/pages/page/index","name":"第三方库实现indexlist"},{"url":"/cml/indexlist2","path":"/pages/page2/index","name":"基于chameleon实现indexlist"}]}
+module.exports = {"mode":"hash","domain":"https://www.chameleon.com","routes":[{"url":"/cml/h5/index","path":"/pages/index/index","name":"首页","mock":"index.php"},{"url":"/cml/indexlist1","path":"/pages/page/index","name":"第三方库实现indexlist"},{"url":"/cml/indexlist2","path":"/pages/page2/index","name":"基于chameleon实现indexlist"}]}
 
 /***/ }),
 
@@ -14860,7 +14860,7 @@ Vue.use(_vueRouter2.default);
 var routerOptions = 
     //根据配置生成路由
     {
-      mode: "history",
+      mode: "hash",
       routes: [
       {
         path: "/cml/h5/index",
