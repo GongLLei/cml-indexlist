@@ -1,0 +1,67 @@
+<template>
+  <view class="index-list-wrapper">
+    <cube-index-list
+    :data="list"
+    @select="onItemSelect"
+  />
+  </view>
+</template>
+
+<script>
+const words = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+class Indexlist implements IndexlistInterface {
+  props = {
+    dataList: {
+      type: Array,
+      default: []
+    }
+  }
+  name = "indexlist"
+  data = {
+    list: [],
+    percent: 50
+  }
+  
+  methods = {
+    initData() {
+      const cityData = [];
+      words.forEach((item, index) => {
+        cityData[index] = {};
+        cityData[index].items = [];
+        cityData[index].name = item;
+      })
+      this.dataList.forEach((item) => {
+        let firstName = item.pinYin.substring(0, 1).toUpperCase();
+        let index = words.indexOf(firstName);
+        cityData[index].items.push(item)
+      })
+      this.list = cityData
+    },
+    onItemSelect(item) {
+      this.$cmlEmit('onselect', item)
+    }
+  }
+
+  mounted() {
+    this.initData();
+  }
+}
+export default new Indexlist();
+</script>
+
+<style lang="less">
+@import './indexlist.less';
+</style>
+
+<script cml-type="json">
+{
+  "base": {
+    "usingComponents": {
+      "cube-index-list": "cube-ui/src/components/index-list/index-list"
+    }
+  }
+}
+</script>
+
+

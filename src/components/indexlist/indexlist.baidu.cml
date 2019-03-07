@@ -1,0 +1,32 @@
+<template>
+  <view class="index-list-wrapper">
+    <text>暂未实现百度小程序端indexlist</text>
+  </view>
+</template>
+
+<script>
+
+class Indexlist implements IndexlistInterface {
+  props = {
+    dataList: {
+      type: Array,
+      default: []
+    }
+  }
+}
+export default new Indexlist();
+</script>
+
+<style lang="less">
+</style>
+
+<script cml-type="json">
+{
+  "base": {
+    "usingComponents": {
+    }
+  }
+}
+</script>
+
+

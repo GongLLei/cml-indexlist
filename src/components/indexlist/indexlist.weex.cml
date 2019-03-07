@@ -1,0 +1,53 @@
+<template>
+  <view>
+    <view class="index-list-wrapper">  
+      <wex-indexlist 
+        :normal-list="list"
+        @wxcIndexlistItemClicked="onItemSelect"
+      />
+    </view>
+  </view>
+</template>
+
+<script>
+class Indexlist implements IndexlistInterface {
+  props = {
+    dataList: {
+      type: Array,
+      default: []
+    }
+  }
+  data = {
+    list: [],
+  }
+
+  mounted() {
+    this.initData();
+  }
+
+  methods = {
+   initData() {
+     this.list = this.dataList;
+   },
+
+   onItemSelect(e) {
+     this.$cmlEmit('onselect', e.item);
+   } 
+  }
+}
+export default new Indexlist();
+</script>
+
+<style lang="less">
+@import './indexlist.less';
+</style>
+
+<script cml-type="json">
+{
+  "base": {
+    "usingComponents": {
+      "wex-indexlist": "weex-ui/packages/wxc-indexlist"
+    }
+  }
+}
+</script>

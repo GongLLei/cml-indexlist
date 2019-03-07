@@ -1,0 +1,105 @@
+<template>
+  <view class="index-list-wrapper">
+    <i-index
+      height="1200rpx"
+    > 
+      <i-index-item
+        wx:for="{{cities}}" 
+        wx:for-index="index" 
+        wx:key="{{index}}" 
+        wx:for-item="item" 
+        name="{{item.key}}"
+      >
+        <view 
+          class="index-list-item" 
+          wx:for="{{item.list}}" 
+          wx:for-index="in" 
+          wx:key="{{in}}" 
+          wx:for-item="it"
+          c-bind:tap="onItemSelect(it)"
+        >
+          <text>{{it.name}}</text>
+        </view>
+      </i-index-item>
+    </i-index>
+  </view>
+</template>
+
+<script>
+const words = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+class Indexlist implements IndexlistInterface {
+  props = {
+    dataList: {
+      type: Array,
+      default: [{
+        name: '',
+        pinYin:'',
+        py:''
+      }]
+    }
+  }
+
+  data = {
+    cities: []
+  }
+
+  methods = {
+    initData() {
+      let storeCity = new Array(26);
+      words.forEach((item,index)=>{
+        storeCity[index] = {
+          key: item,
+          list: []
+        };
+      })
+      this.dataList.forEach((item)=>{
+        let firstName = item.pinYin.substring(0,1).toUpperCase();
+        let index = words.indexOf(firstName);
+        storeCity[index].list.push(item);
+      })
+      this.cities = storeCity;
+    },
+    onItemSelect(item) {
+      this.$cmlEmit('onselect', item)
+    }
+  }
+
+  mounted() {
+    this.initData();
+  }
+
+}
+
+export default new Indexlist();
+</script>
+
+<style lang="less">
+@import 'indexlist.less';
+.index-list {
+  &-item {
+    height: 90cpx;
+    padding-left: 20cpx;
+    justify-content: center;
+    border-bottom: 1cpx solid #F7F7F7
+  }
+}
+</style>
+
+<script cml-type="json">
+{
+  "base": {
+    "usingComponents": {
+      "i-index":"/iview/index/index",
+      "i-index-item": "/iview/index-item/index"
+    }
+  },
+  "wx": {
+    "window": {
+      "backgroundTextStyle": "dark",
+      "navigationBarBackgroundColor": "#343434",
+      "navigationBarTitleText": "CNODE",
+      "navigationBarTextStyle": "#fff"
+    }
+  }
+}
+</script>

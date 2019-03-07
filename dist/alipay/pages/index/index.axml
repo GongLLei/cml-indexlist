@@ -1,0 +1,6 @@
+<view class="page-wrapper  cml-base cml-view">
+  <view style="margin-bottom:30rpx" class=" cml-base cml-view">
+    <cml-buildin-button text="第三方库封装indexlist" onOnclick="_cmlInlineStatementEventProxy" data-arg0="{{0}}" data-args="0" data-eventonclick="openIndexList" class=" cml-base cml-button" onCmlPropsEventProxy="_cmlPropsEventProxy" />
+  </view>
+  <cml-buildin-button text="基于chameleon统一实现indexlist" onOnclick="_cmlInlineStatementEventProxy" data-arg0="{{1}}" data-args="1" data-eventonclick="openIndexList" class=" cml-base cml-button" onCmlPropsEventProxy="_cmlPropsEventProxy" />
+</view>
