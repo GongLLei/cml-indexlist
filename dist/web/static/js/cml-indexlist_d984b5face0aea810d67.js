@@ -2517,7 +2517,6 @@ var render = function() {
             on: {
               click: _vm.$stopOuterA,
               cml$tap: function($event) {
-                $event.stopPropagation()
                 _vm._cmlEventProxy($event, "closeevent")
               }
             }
@@ -2540,7 +2539,6 @@ var render = function() {
               on: {
                 click: _vm.$stopOuterA,
                 cml$tap: function($event) {
-                  $event.stopPropagation()
                   _vm._cmlEventProxy($event, "contentTap")
                 }
               }
@@ -7662,16 +7660,13 @@ var render = function() {
       },
       on: {
         touchstart: function($event) {
-          $event.stopPropagation()
           return _vm.addActiveCls($event)
         },
         touchend: function($event) {
-          $event.stopPropagation()
           return _vm.removeActiveCls($event)
         },
         click: _vm.$stopOuterA,
         cml$tap: function($event) {
-          $event.stopPropagation()
           _vm.selectItem()
         }
       }
@@ -8606,7 +8601,6 @@ var render = function() {
                     on: {
                       click: _vm.$stopOuterA,
                       cml$tap: function($event) {
-                        $event.stopPropagation()
                         _vm._cmlInlineStatementEventProxy(
                           "handleSelect",
                           subitem
@@ -8657,7 +8651,6 @@ var render = function() {
               on: {
                 click: _vm.$stopOuterA,
                 cml$tap: function($event) {
-                  $event.stopPropagation()
                   _vm._cmlInlineStatementEventProxy("scrollToItem", item)
                 }
               }
@@ -9948,7 +9941,6 @@ var render = function() {
                           on: {
                             click: _vm.$stopOuterA,
                             cml$tap: function($event) {
-                              $event.stopPropagation()
                               _vm.clickItem(item)
                             }
                           }
@@ -10224,7 +10216,6 @@ var render = function() {
             "pulling-down": _vm.onPullingDown,
             "pulling-up": _vm.onPullingUp,
             cml$scroll: function($event) {
-              $event.stopPropagation()
               return _vm.scroll($event)
             }
           },
@@ -10279,7 +10270,6 @@ var render = function() {
                       on: {
                         click: _vm.$stopOuterA,
                         cml$tap: function($event) {
-                          $event.stopPropagation()
                           return _vm.titleClick($event)
                         }
                       }
@@ -10318,7 +10308,6 @@ var render = function() {
               attrs: { "data-evt-touchstart": "", "data-evt-touchmove": "" },
               on: {
                 touchstart: function($event) {
-                  $event.stopPropagation()
                   return _vm.onShortcutTouchStart($event)
                 },
                 touchmove: function($event) {
@@ -11074,7 +11063,6 @@ var render = function() {
       on: {
         click: _vm.$stopOuterA,
         cml$tap: function($event) {
-          $event.stopPropagation()
           _vm._cmlEventProxy($event, "onclick")
         }
       }
@@ -15300,7 +15288,6 @@ var render = function() {
       attrs: { "data-evt-touchstart": "" },
       on: {
         touchstart: function($event) {
-          $event.stopPropagation()
           return _vm.touchstartHandler($event)
         }
       }
